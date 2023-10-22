@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.0",
+    "remixicon": "^3.5.0"
+  }
+}

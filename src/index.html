@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/node_modules/remixicon/fonts/remixicon.css" rel="stylesheet" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body class="h-screen">
+    <header class="border-b border-gray-300">
+      <nav class="p-2 flex justify-between items-center">
+        <div
+          class="left_navbar flex justify-between items-center flex-wrap p-2 w-2/5"
+        >
+          <div>
+            <h1 class="text-2xl text-purple-700 font-semibold">
+              <i class="ri-copilot-fill me-2"></i>Goboard
+            </h1>
+          </div>
+          <div
+            class="border-2 rounded-md border-zinc-300 p-1 w-1/2 flex items-center"
+          >
+            <i class="ri-search-line text-sm text-zincborder-zinc-300"></i>
+            <input
+              type="search"
+              placeholder="Search..."
+              class="p-1 text-sm w-full text-gray-500 focus:outline-none"
+            />
+          </div>
+        </div>
+        <div class="right_navabar flex items-center space-x-5">
+          <i
+            class="ri-message-2-line bg-stone-300 p-1 w-8 h-8 rounded-full text-center"
+          ></i>
+          <i
+            class="ri-notification-line bg-stone-300 p-1 w-8 h-8 rounded-full text-center"
+          ></i>
+          <img
+            class="rounded-full w-8 h-8"
+            src="https://tailwindcss.com/img/erin-lindford.jpg"
+            alt="avatar"
+          />
+        </div>
+      </nav>
+    </header>
+    <section class="container_dashboard flex">
+      <aside
+        class="sidebar_dashbaord min-h-screen flex flex-col justify-between w-60 border-r shadow-md"
+      >
+        <div class="p-3 tab_list_dahsboard">
+          <ul class="flex flex-col space-y-4 mt-3">
+            <li
+              class="font-extralight flex items-center mx-auto text-center w-[180px] bg-purple-500 p-2 rounded-md text-white"
+            >
+              <i class="me-2 ri-dashboard-line"></i>Dahboard
+            </li>
+            <li
+              class="text-gray-500 font-extralight flex items-center mx-auto text-center w-[180px] p-2"
+            >
+              <i class="me-2 ri-bar-chart-line"></i>Perfomance
+            </li>
+            <li
+              class="text-gray-500 font-extralight flex items-center mx-auto text-center w-[180px] p-2"
+            >
+              <i class="me-2 ri-shopping-bag-3-line"></i>Orders
+            </li>
+            <li
+              class="text-gray-500 font-extralight flex items-center mx-auto text-center w-[180px] p-2"
+            >
+              <i class="me-2 ri-box-3-line"></i>Product
+            </li>
+            <li
+              class="text-gray-500 font-extralight flex items-center mx-auto text-center w-[180px] p-2"
+            >
+              <i class="me-2 ri-briefcase-3-line"></i>Agents
+            </li>
+            <li
+              class="text-gray-500 font-extralight flex items-center mx-auto text-center w-[180px] p-2"
+            >
+              <i class="me-2 ri-group-line"></i>Customers
+            </li>
+            <li
+              class="text-gray-500 font-extralight flex items-center mx-auto text-center w-[180px] p-2"
+            >
+              <i class="me-2 ri-line-chart-line"></i>Reports
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li
+              class="text-gray-500 font-extralight flex items-center mx-auto text-center w-[180px] p-2"
+            >
+              <i class="me-2 ri-settings-3-line"></i>Setting
+            </li>
+            <li
+              class="text-gray-500 font-extralight flex items-center mx-auto text-center w-[180px] p-2"
+            >
+              <i class="me-2 ri-logout-box-r-line"></i>Log Out
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <main class="main_dashbaord w-full min-h-screen p-3 bg-stone-300">
+        <div class="top_main_dashboard p-2 flex justify-between items-center">
+          <div>
+            <h1 class="text-2xl font-extralight">Welcome Chafiki</h1>
+            <p class="text-sm font-extralight text-gray-500">
+              here's what's happening with your store today
+            </p>
+          </div>
+          <select
+            class="py-2 rounded-md text-gray-500 border border-gray-500 focus:outline-none"
+            name="time"
+            id="time"
+          >
+            <option value="yearly" class="my-3">Yearly</option>
+          </select>
+        </div>
+        <div class="analytic_time_dahsboard grid grid-cols-4 gap-2 mt-4">
+          <div
+            class="bg-purple-500 p-2 flex flex-col space-y-2 text-white flex-1 rounded-md shadow-lg"
+          >
+            <i class="ri-coins-line text-2xl"></i>
+            <h2>Today's Sale</h2>
+            <span class="text-2xl font-bold">$12,426</span>
+            <div class="flex justify-end">
+              <span
+                class="bg-green-200 font-bold w-[80px] text-center rounded-lg text-green-500"
+                ><i class="ri-arrow-up-line"></i> 36%</span
+              >
+            </div>
+          </div>
+          <div
+            class="p-2 bg-white flex flex-col space-y-2 flex-1 rounded-lg shadow-lg"
+          >
+            <i class="ri-price-tag-3-line text-2xl text-gray-500"></i>
+            <h2 class="text-gray-500">Total Sales</h2>
+            <span class="text-2xl font-bold">$13,356</span>
+            <div class="flex justify-end">
+              <span
+                class="bg-green-200 font-bold w-[80px] text-center rounded-lg text-green-500"
+                ><i class="ri-arrow-up-line"></i> 38%</span
+              >
+            </div>
+          </div>
+          <div
+            class="p-2 bg-white flex flex-col space-y-2 flex-1 rounded-lg shadow-lg"
+          >
+            <i class="ri-shopping-bag-3-line text-2xl text-gray-500"></i>
+            <h2 class="text-gray-500">Total Orders</h2>
+            <span class="text-2xl font-bold">$10,545</span>
+            <div class="flex justify-end">
+              <span
+                class="bg-red-200 font-bold w-[80px] text-center rounded-lg text-red-500"
+                ><i class="ri-arrow-down-line"></i> 15%</span
+              >
+            </div>
+          </div>
+          <div
+            class="p-2 bg-white flex flex-col space-y-2 flex-1 rounded-lg shadow-lg"
+          >
+            <i class="ri-group-line text-2xl text-gray-500"></i>
+            <h2 class="text-gray-500">Total Customers</h2>
+            <span class="text-2xl font-bold">$13,254</span>
+            <div class="flex justify-end">
+              <span
+                class="bg-green-200 font-bold w-[80px] text-center rounded-lg text-green-500"
+                ><i class="ri-arrow-up-line"></i> 24%</span
+              >
+            </div>
+          </div>
+          <div class="canvas col-span-3 row-span-2 bg-white rounded-lg p-2">
+            <div class="top_canva flex items-center justify-between">
+              <h1 class="font-bold text-xl">Sales Report</h1>
+              <button
+                class="bg-purple-500 hover:bg-purple-700 text-white text-sm p-2 rounded-md"
+              >
+                Export to PDF
+              </button>
+            </div>
+            <canvas id="myChart"></canvas>
+          </div>
+          <div class="traffic flex flex-col space-y-5 bg-white rounded-lg p-2">
+            <h1 class="font-bold text-xl">Traffic Sources</h1>
+            <div>
+              <div class="flex justify-between items-center">
+                <h2 class="text-gray-500">Direct</h2>
+                <span class="font-bold">1,040</span>
+              </div>
+              <div
+                class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"
+              >
+                <div
+                  class="bg-blue-600 h-2.5 rounded-full"
+                  style="width: 50%"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center">
+                <h2 class="text-gray-500">Referral</h2>
+                <span class="font-bold">900</span>
+              </div>
+              <div
+                class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"
+              >
+                <div
+                  class="bg-blue-600 h-2.5 rounded-full"
+                  style="width: 30%"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center">
+                <h2 class="text-gray-500">Socila Media</h2>
+                <span class="font-bold">500</span>
+              </div>
+              <div
+                class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"
+              >
+                <div
+                  class="bg-blue-600 h-2.5 rounded-full"
+                  style="width: 20%"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="recent_customers bg-white p-2 rounded-lg">
+            <h1 class="font-bold text-xl">Recent Customers</h1>
+            <div class="flex flex-col space-y-4 mt-4">
+              <div class="flex space-x-4">
+                <img
+                  class="h-10 w-10 rounded-full"
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt="avatar"
+                />
+                <div>
+                  <p class="text-sm text-black font-semibold">Elizabeth Hiri</p>
+                  <p class="text-slate-500 text-sm font-medium">
+                    elzaww@gmail.com
+                  </p>
+                </div>
+              </div>
+              <div class="flex space-x-4">
+                <img
+                  class="h-10 w-10 rounded-full"
+                  src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt="avatar"
+                />
+                <div>
+                  <p class="text-sm text-black font-semibold">Julia Asia</p>
+                  <p class="text-slate-500 text-sm font-medium">
+                    julia55@gmail.com
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sales_report col-span-3 bg-white rounded-lg p-2">
+            <div class="flex items-center justify-between">
+              <h1 class="text-xl font-bold">Sales Report</h1>
+              <p class="text-gray-500 font-semibold">
+                See All Data<i class="ms-2 ri-arrow-right-line"></i>
+              </p>
+            </div>
+            <div class="section p-2">
+              <div class="data flex items-center justify-between p-2">
+                <div class="flex space-x-4">
+                  <img
+                    class="h-10 w-10 rounded-full"
+                    src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt="avatar"
+                  />
+                  <div>
+                    <p class="text-sm text-black font-semibold">Yassine Ait</p>
+                    <p class="text-slate-500 text-sm font-medium">
+                      yassineAit12@gmail.com
+                    </p>
+                  </div>
+                </div>
+                <span class="bg-green-200 text-green-500 text-sm p-2 rounded-md"
+                  >Success</span
+                >
+                <span class="text-gray-500 text-sm">OCT 14,2023</span>
+                <div class="flex items-center space-x-4">
+                  <span class="text-xl font-bold">$1,200</span>
+                  <span
+                    class="bg-green-200 font-bold w-[80px] text-center rounded-lg text-green-500"
+                    ><i class="ri-arrow-up-line"></i> 30%</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="section p-2">
+              <div class="data flex items-center justify-between p-2">
+                <div class="flex space-x-4">
+                  <img
+                    class="h-10 w-10 rounded-full"
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt="avatar"
+                  />
+                  <div>
+                    <p class="text-sm text-black font-semibold">Ali Mohamed</p>
+                    <p class="text-slate-500 text-sm font-medium">
+                      alimohamed@gmail.com
+                    </p>
+                  </div>
+                </div>
+                <span class="bg-red-200 text-red-500 text-sm p-2 rounded-md"
+                  >Pending</span
+                >
+                <span class="text-gray-500 text-sm">OCT 14,2023</span>
+                <div class="flex items-center space-x-4">
+                  <span class="text-xl font-bold">$1,000</span>
+                  <span
+                    class="bg-red-200 font-bold w-[80px] text-center rounded-lg text-red-500"
+                    ><i class="ri-arrow-down-line"></i> 18%</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="section p-2">
+              <div class="data flex items-center justify-between p-2">
+                <div class="flex space-x-4">
+                  <img
+                    class="h-10 w-10 rounded-full"
+                    src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt="avatar"
+                  />
+                  <div>
+                    <p class="text-sm text-black font-semibold">Yassine Ait</p>
+                    <p class="text-slate-500 text-sm font-medium">
+                      yassineAit12@gmail.com
+                    </p>
+                  </div>
+                </div>
+                <span class="bg-green-200 text-green-500 text-sm p-2 rounded-md"
+                  >Success</span
+                >
+                <span class="text-gray-500 text-sm">OCT 14,2023</span>
+                <div class="flex items-center space-x-4">
+                  <span class="text-xl font-bold">$1,200</span>
+                  <span
+                    class="bg-green-200 font-bold w-[80px] text-center rounded-lg text-green-500"
+                    ><i class="ri-arrow-up-line"></i> 12%</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="bg-white rounded-lg text-center flex flex-col items-center space-y-5 justify-center p-2">
+              <h1 class="text-xl font-bold">The Unique power Of One</h1>
+              <p class="text-sm text-gray-500">With just one contact system invoice, we aim to help simplify you WorkK.</p>
+              <button class="p-2 text-purple-400 rounded-md  bg-purple-200">Create invoice</button>
+          </div>
+        </div>
+      </main>
+    </section>
+    <script src="./js/analy.js"></script>
+  </body>
+</html>
